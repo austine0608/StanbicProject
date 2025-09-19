@@ -41,8 +41,8 @@ pipeline{
             steps{
                 script{
                     sh"""
-                            kubectl set image deployment/my-web-development my-web-container=$DOCKER_IMAGE:\£BUILD_NUMBER --RECORD ||\
-                            kubectl apply -fk8s-deploy.yam
+                            kubectl set image deployment/my-web-development my-web-container=tonbra/stanbic:latest --record
+                            kubectl rollout status deployment/my-web-development
                     """
                 }
                 echo 'Deploying..'
