@@ -38,13 +38,13 @@ pipeline{
         }
         stage('Deploy To Kubernetics'){
             steps{
-                script{
-                    // sh"""
-                    //         kubectl set image deployment/my-web-development my-web-container=tonbra/stanbic:latest --record
-                    //         kubectl rollout status deployment/my-web-development
-                    // """
-                }
-                echo 'Deploying..'
+                // // script{
+                // //     // sh"""
+                // //     //         kubectl set image deployment/my-web-development my-web-container=tonbra/stanbic:latest --record
+                // //     //         kubectl rollout status deployment/my-web-development
+                // //     // """
+                // // }
+                // echo 'Deploying..'
             }
         }
     }
