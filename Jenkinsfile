@@ -8,7 +8,7 @@ pipeline{
         stage('Checkout From GitHub'){
             steps{
                 git branch: 'main',
-                url: https://github.com/austine0608/StanbicProject.git
+                url: 'https://github.com/austine0608/StanbicProject.git'
                 echo 'Building..'
             }
         }
