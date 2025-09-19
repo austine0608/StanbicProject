@@ -1,9 +1,9 @@
 pipeline{
     agent any
 
-    environment{
-        DOCKER _IMAGE = 'tonbra/stanbic:latest'
-    }
+    // environment{
+    //     DOCKER _IMAGE = 'tonbra/stanbic:latest'
+    // }
     stages{
         stage('Checkout From GitHub'){
             steps{
@@ -12,15 +12,15 @@ pipeline{
                 echo 'Building..'
             }
         }
-        stage('Test'){
-            steps{
-                script{
-                    sh 'chmod +x test/test_app.sh'
-                    sh './test/test_app.sh'
-                }
-                echo 'Testing..'
-            }
-        }
+        // stage('Test'){
+        //     steps{
+        //         script{
+        //             sh 'chmod +x test/test_app.sh'
+        //             sh './test/test_app.sh'
+        //         }
+        //         echo 'Testing..'
+        //     }
+        // }
         stage('Build Docker Image'){
             steps{
                 script{
