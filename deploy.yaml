@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deploment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app-deploment
+  template:
+    metadata:
+      labels:
+        app: app-deploment
+    spec:
+      containers:
+        - name: app-deploment
+          image: tonbra/stanbic:latest
+          ports:
+            - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-service
+spec:
+  selector:
+    app: app-deploment
+  ports:
+    - port: 80
+      targetPort: 80
