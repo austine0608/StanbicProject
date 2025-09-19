@@ -26,9 +26,8 @@ pipeline{
                 script{
                     sh 'docker build -t nginx:alpine'
                 }
-                echo 'Testing..'
+                echo 'Building..'
             }
-        }
         stage('Login To Deploy Hub & Push Image'){
             steps{
                 script{
