@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app-deploment
-          image: tonbra/stanbic:latest
+          image: <IMAGE>
           ports:
             - containerPort: 80
 
